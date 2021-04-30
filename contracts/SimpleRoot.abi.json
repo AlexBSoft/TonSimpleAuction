@@ -1,0 +1,99 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"_CodeAuctionEnglish","type":"cell"},
+				{"name":"_CodeAuctionDutch","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "CreateAuctionEnglish",
+			"inputs": [
+				{"name":"description","type":"bytes"},
+				{"name":"startPrice","type":"uint128"},
+				{"name":"auctionDuration","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"addrAuction","type":"address"}
+			]
+		},
+		{
+			"name": "CreateAuctionDutch",
+			"inputs": [
+				{"name":"description","type":"bytes"},
+				{"name":"startPrice","type":"uint128"},
+				{"name":"minPrice","type":"uint128"},
+				{"name":"auctionDuration","type":"uint256"}
+			],
+			"outputs": [
+				{"name":"addrAuction","type":"address"}
+			]
+		},
+		{
+			"name": "ResolveAuctionEnglish",
+			"inputs": [
+				{"name":"description","type":"bytes"}
+			],
+			"outputs": [
+				{"name":"addrAuction","type":"address"}
+			]
+		},
+		{
+			"name": "ResolveAuctionDutch",
+			"inputs": [
+				{"name":"description","type":"bytes"}
+			],
+			"outputs": [
+				{"name":"addrAuction","type":"address"}
+			]
+		},
+		{
+			"name": "_auctionFinished",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "Withdraw",
+			"inputs": [
+				{"name":"dest","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "AuctionsState",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"AuctionsState","type":"map(address,bool)"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "auctionDeployed",
+			"inputs": [
+				{"name":"addrAuction","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "auctionFinished",
+			"inputs": [
+				{"name":"addrAuction","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	]
+}

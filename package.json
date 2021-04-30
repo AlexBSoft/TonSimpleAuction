@@ -1,0 +1,25 @@
+{
+  "name": "tonauction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:pack": "mocha --exit -r ts-node/register -t 300000 './tests/pack.ts'",
+    "test:common": "mocha --exit -r ts-node/register -t 300000 './tests/common.test.ts'",
+    "test:deploy": "mocha --exit -r ts-node/register -t 300000 './tests/deploy.ts'",
+    "test:debot": "mocha --exit -r ts-node/register -t 300000 './tests/debot.test.ts'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tonclient/core": "^1.14.0",
+    "@tonclient/lib-node": "^1.14.0",
+    "@types/chai": "^4.2.17",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "^15.0.1",
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}

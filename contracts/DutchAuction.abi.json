@@ -1,0 +1,217 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"_Owner","type":"uint256"},
+				{"name":"_StartPrice","type":"uint128"},
+				{"name":"_MinPrice","type":"uint128"},
+				{"name":"_auctionDuration","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "ReducePrice",
+			"inputs": [
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "Withdraw",
+			"inputs": [
+				{"name":"dest","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "Finish",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "TimeToEnd",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"int256"}
+			]
+		},
+		{
+			"name": "GetInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"_isCompleted","type":"bool"},
+				{"name":"_StartPrice","type":"uint128"},
+				{"name":"_Description","type":"bytes"},
+				{"name":"_auctionDuration","type":"uint256"},
+				{"name":"_auctionEndTime","type":"uint256"},
+				{"name":"_TimeToEnd","type":"int256"}
+			]
+		},
+		{
+			"name": "Deployer",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"Deployer","type":"address"}
+			]
+		},
+		{
+			"name": "Description",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"Description","type":"bytes"}
+			]
+		},
+		{
+			"name": "ExtraData",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"ExtraData","type":"bytes"}
+			]
+		},
+		{
+			"name": "Owner",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"Owner","type":"uint256"}
+			]
+		},
+		{
+			"name": "StartPrice",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"StartPrice","type":"uint128"}
+			]
+		},
+		{
+			"name": "CurrentPrice",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"CurrentPrice","type":"uint128"}
+			]
+		},
+		{
+			"name": "isCompleted",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"isCompleted","type":"bool"}
+			]
+		},
+		{
+			"name": "auctionDuration",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"auctionDuration","type":"uint256"}
+			]
+		},
+		{
+			"name": "auctionEndTime",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"auctionEndTime","type":"uint256"}
+			]
+		},
+		{
+			"name": "AuctionType",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"AuctionType","type":"uint8"}
+			]
+		},
+		{
+			"name": "firstBid",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"addr","type":"address"},{"name":"pubKey","type":"uint256"},{"name":"value","type":"uint128"}],"name":"firstBid","type":"tuple"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"Deployer","type":"address"},
+		{"key":2,"name":"Description","type":"bytes"}
+	],
+	"events": [
+		{
+			"name": "PriceReduced",
+			"inputs": [
+				{"name":"value0","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "PriceMin",
+			"inputs": [
+				{"name":"value0","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "BidRefund",
+			"inputs": [
+				{"name":"value0","type":"address"},
+				{"name":"value1","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "BidNotAccepted",
+			"inputs": [
+				{"name":"value0","type":"address"},
+				{"name":"value1","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "BidPlaced",
+			"inputs": [
+				{"name":"value0","type":"address"},
+				{"name":"value1","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "BidAccepted",
+			"inputs": [
+				{"name":"value0","type":"address"},
+				{"name":"value1","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "AuctionFinished",
+			"inputs": [
+				{"name":"value0","type":"address"},
+				{"name":"value1","type":"uint128"},
+				{"name":"value2","type":"address"}
+			],
+			"outputs": [
+			]
+		}
+	]
+}
